@@ -1,0 +1,93 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body{
+  display: flex;
+  padding: 0 10px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #5372f0;
+}
+
+.wrapper{
+  padding: 35px;
+  overflow-x: hidden;
+  position: relative;
+  max-width: 1000px;
+  border-radius: 13px;
+  background: #fff;
+}
+
+.wrapper .icon{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.icon:first-child{
+  left: 0;
+  display: none;
+  background: linear-gradient(90deg, #fff 70%, transparent);
+}
+
+.icon:last-child{
+  right: 0;
+  justify-content: flex-end;
+  background: linear-gradient(-90deg, #fff 70%, transparent);
+}
+.icon i{
+  width: 55px;
+  height: 55px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-align: center;
+  line-height: 55px;
+  border-radius: 50%;
+}
+
+.icon i:hover{
+  background: #d8d5f2;
+}
+
+.icon:first-child i{
+  margin-left: 15px;
+}
+
+.icon:last-child i{
+  margin-right: 15px;
+}
+
+.wrapper .tabs-box{
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.tabs-box.dragging{
+  scroll-behavior: smooth;
+  cursor: grab;
+}
+
+.tabs-box .tab{
+  cursor: pointer;
+  font-size: 1.18rem;
+  white-space: nowrap;
+  background: #f5f4fd;
+  border: 1px solid #d8d5f2;
+  padding: 13px 20px;
+  border-radius: 30px;
+}
+
+.tabs-box.dragging .tab{
+  user-select: none;
+}
